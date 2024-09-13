@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionario - Gestión de Base de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Base de Datos - Concesionario</h1>
+        
+        <div class="form-section">
+            <h2>Crear Base de Datos</h2>
+            <form action="crear_db.php" method="post">
+                <button type="submit" name="create_db">Crear Base de Datos</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Crear Tabla AUTO</h2>
+            <form action="crear_tabla.php" method="post">
+                <button type="submit" name="create_table">Crear Tabla AUTO</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Insertar Registro en Tabla AUTO</h2>
+            <form action="insertar_auto.php" method="post">
+                <label for="placa">Placa:</label>
+                <input type="text" id="placa" name="placa" maxlength="6" required>
+
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" maxlength="15" required>
+
+                <label for="modelo">Modelo:</label>
+                <input type="number" id="modelo" name="modelo" min="1900" max="2100" required>
+
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" maxlength="10" required>
+
+                <button type="submit" name="insert_auto">Insertar Registro</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
